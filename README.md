@@ -1,5 +1,6 @@
 #  LatentCLR: A Contrastive Learning Approach for Unsupervised Discovery of Interpretable Directions 
 
+![Applied to our OCT-GAN](sample.png)
 ![stylegan_ours](https://user-images.githubusercontent.com/63148269/159662813-aebb649a-4da3-434e-8157-51cb14d40861.png)
 
 > https://arxiv.org/abs/2104.00820
