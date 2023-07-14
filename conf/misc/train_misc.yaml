@@ -13,6 +13,6 @@ hparams:
   batch_size: 32
   iterations: 10000
 
-k: 32
+k: 8
 feed_layers: null
 train_projector: true

@@ -98,9 +98,11 @@ def download_manual(url, output_name):
 
 
 def download_ckpt(url, output_name):
-    if "drive.google" in url:
-        download_google_drive(url, output_name)
-    elif "mega.nz" in url:
-        download_manual(url, output_name)
-    else:
-        download_generic(url, output_name)
+    # if "drive.google" in url:
+    #     download_google_drive(url, output_name)
+    # elif "mega.nz" in url:
+    #     download_manual(url, output_name)
+    # else:
+    #     download_generic(url, output_name)
+
+    download_manual(url, output_name)

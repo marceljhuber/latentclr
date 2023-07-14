@@ -347,8 +347,8 @@ class ToRGB(nn.Module):
         if upsample:
             self.upsample = Upsample(blur_kernel)
 
-        self.conv = ModulatedConv2d(in_channel, 3, 1, style_dim, demodulate=False)
-        self.bias = nn.Parameter(torch.zeros(1, 3, 1, 1))
+        self.conv = ModulatedConv2d(in_channel, 1, 1, style_dim, demodulate=False) #new
+        self.bias = nn.Parameter(torch.zeros(1, 1, 1, 1)) #new
 
     def forward(self, input, style, skip=None):
         out = self.conv(input, style)
@@ -389,7 +389,7 @@ class Generator(nn.Module):
         size,
         style_dim,
         n_mlp,
-        channel_multiplier=2,
+        channel_multiplier=1,
         blur_kernel=[1, 3, 3, 1],
         lr_mlp=0.01,
     ):
@@ -661,7 +661,7 @@ class Discriminator(nn.Module):
             1024: 16 * channel_multiplier,
         }
 
-        convs = [ConvLayer(3, channels[size], 1)]
+        convs = [ConvLayer(1, channels[size], 1)] #new
 
         log_size = int(math.log(size, 2))
 

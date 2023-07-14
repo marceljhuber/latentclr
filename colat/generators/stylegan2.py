@@ -46,7 +46,7 @@ class StyleGAN2Generator(Generator):
         # Image widths
         configs = {
             # Converted NVIDIA official
-            "ffhq": 1024,
+            "ffhq": 512,
             "car": 512,
             "cat": 256,
             "church": 256,
@@ -55,6 +55,7 @@ class StyleGAN2Generator(Generator):
             "bedrooms": 256,
             "kitchen": 256,
             "places": 256,
+            "oct": 256,
         }
 
         assert (
@@ -90,6 +91,7 @@ class StyleGAN2Generator(Generator):
             "places": "https://drive.google.com/uc?export=download&id=1X8-wIH3aYKjgDZt4KMOtQzN1m4AlCVhm",
             "bedrooms": "https://drive.google.com/uc?export=download&id=1nZTW7mjazs-qPhkmbsOLLA_6qws-eNQu",
             "kitchen": "https://drive.google.com/uc?export=download&id=15dCpnZ1YLAnETAPB0FGmXwdBclbwMEkZ",
+            "oct": "https://huggingface.co/marcelhuber/oct_256_resized_1600/blob/main/oct_256_resized_1600.pkl",
         }
 
         url = checkpoints[self.outclass]
